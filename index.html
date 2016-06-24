@@ -1,10 +1,258 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="styles.css" >
+<!doctype html>
+<html class="no-js" lang="">
+
+<style>
+
+    body
+    {
+      margin: auto;
+      width: 70%;
+      padding: 5px;
+    }
+
+    .row { width: 1000px; } /* Goes across, its the width NOT the height */
+    .row:after { content: ""; display: table; clear: both; } /* Clearfix hack */
+
+    /* Height classes */
+    .col-h-1 { height: 50px; }
+    .col-h-2 { height: 100px; }
+    .col-h-3 { height: 150px; }
+    .col-h-4 {height: 200px; }
+
+    /* Width classes */
+    .col-w-1, .col-w-2,
+    .col-w-3, .col-w-4 {
+        float: left;
+        position: relative;
+    }
+    .col-w-1 { width: 50px; }
+    .col-w-2 { width: 100px; }
+    .col-w-3 { width: 150px; }
+    .col-w-4 { width: 200px; }
+
+    /* Color classes */
+    .color-red    { background-color: red; }
+    .color-purple { background-color: #DA4DC1; }
+    .color-darkgreen  { background-color: #417505; }
+    .color-lightgreen {background-color: #7ED322;}
+    .color-yellow { background-color: yellow; }
+    .color-teal   { background-color: #4FE3C2; }
+    .color-blue   { background-color: #4990E2; }
+    .color-white  { background-color: white;   }
+    .color-darkgray  {background-color: #4A4A4A; }
+    .color-lightgray  {background-color: #D7D8D7; }
+    .color-lavender {background-color: #8F13FE; }
+    .color-orange {background-color: #F4A523;}
+    .color-purple {background-color: #B413DB;}
+
+    .col-absolute {
+      position: absolute;
+  }
+
+  .col-center {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      overflow: auto;
+      margin: auto;
+
+      z-index: 1;
+  }
+
+  .col-top-left {
+      top: 25px;
+      left: 25px;
+  }
+
+  .col-bottom-right {
+      bottom: 25px;
+      right: 25px;
+  }
+
+  .col-first-time {
+    bottom: 75px;
+    left: 50px;
+  }
+
+  .col-second-time {
+    bottom: 75px;
+    left: 150px;
+  }
+
+  .col-third-time {
+    bottom: 75px;
+    left: 200px;
+  }
+
+  .col-middle {
+    bottom:75px;
+  }
+  .col-fourth-time{
+    bottom:75px;
+    left:100px;
+  }
+
+  .col-bottom-corner{
+    bottom:0px;
+    right:0px;
+  }
+
+  .col-top-right {
+    right:0px;
+  }
+
+  .col-topleftcorner {
+    left:0px;
+  }
+
+  .col-bottomleftcorner {
+    left:0px;
+    bottom:0px;
+  }
+
+  .col-bottomrightcorner {
+    right:0px;
+    bottom:0px;
+  }
+</style>
+
+    <head> <!-- Settings and information for the page listed in <head>-->
+        <meta charset="utf-8"> <!-- Description for the page are in <meta> -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Fun Little Puzzle</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- Apple Icon Bookmark Icon -->
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
+
+
 
     <body>
 
+      <div class="row"> <!-- Describes a single row being filled from left to right. -->
+          <div class="col-w-4 col-h-4 color-blue">
+          <div class="col-w-1 col-h-1 col-absolute col-first-time color-darkgray"></div>
+          <div class="col-w-1 col-h-1 col-absolute col-second-time color-darkgray"></div>
+          </div>
+          <div class="col-w-4 col-h-4 color-blue">
+          <div class="col-w-1 col-h-1 col-absolute col-middle color-darkgray"></div>
+          <div class="col-w-1 col-h-1 col-absolute col-fourth-time color-darkgray"></div>
+        </div>
+          <div class="col-w-4 col-h-4 color-yellow">
+            <div class="col-w-1 col-h-1 col-absolute color-darkgray"></div>
+            <div class="col-w-1 col-h-1 col-absolute col-bottom-corner color-darkgray"></div>
+          </div>
+          <div class="col-w-4 col-h-4 color-lightgray">
+            <div class="col-w-1 col-h-1 col-absolute col-center color-darkgray"></div>
+          </div>
+          <div class="col-w-2 col-h-4 color-red"> </div>
+          <div class="col-w-2 col-h-4 color-teal">
+            <div class ="col-w-2 col-h-2 col-absolute col-bottom-corner color-darkgray"></div>
+          </div>
+      </div>
+
+
+      <div class="row"> <!-- Describes a single row being filled from left to right. -->
+          <div class="col-w-1 col-h-1 color-red"> </div>
+          <div class="col-w-1 col-h-1 color-yellow"></div>
+          <div class="col-w-1 col-h-1 color-red"></div>
+          <div class="col-w-1 col-h-1 color-yellow"></div>
+          <div class="col-w-4 col-h-1 color-purple"></div>
+          <div class="col-w-4 col-h-1 color-purple"></div>
+          <div class="col-w-4 col-h-1 color-lavender"></div>
+          <div class="col-w-4 col-h-1 color-lavender"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-w-4 col-h-1 color-orange"></div>
+        <div class="col-w-4 col-h-1 color-orange"></div>
+        <div class="col-w-4 col-h-1 color-darkgreen"></div>
+        <div class="col-w-4 col-h-1 color-lavender"></div>
+        <div class="col-w-4 col-h-1 color-lavender"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-w-4 col-h-4 color-darkgray"></div>
+        <div class="col-w-2 col-h-2 color-red">
+          <div class="col-w-1 col-h-1 color-white"></div>
+        </div>
+        <div class="col-w-2 col-h-2 color-red"></div>
+        <div class="col-w-2 col-h-2 color-red">
+          <div class="col-w-1 col-h-1 col-absolute col-top-right color-white"></div>
+        </div>
+        <div class="col-w-2 col-h-2 color-lightgray">
+          <div class="col-w-1 col-h-1 col-absolute col-topleftcorner color-lightgreen"></div>
+          <div class="col-w-1 col-h-1 col-absolute col-top-right color-white"></div>
+        </div>
+        <div class="col-w-2 col-h-2 color-lightgray">
+          <div class="col-w-1 col-h-1 col-absolute col-topleftcorner color-lightgreen"></div>
+          <div class="col-w-1 col-h-1 col-absolute col-top-right color-white"></div>
+        </div>
+        <div class="col-w-2 col-h-2 color-lightgray">
+          <div class="col-w-1 col-h-1 col-absolute col-topleftcorner color-lightgreen"></div>
+          <div class="col-w-1 col-h-1 col-absolute col-top-right color-white"></div>
+        </div>
+        <div class="col-w-4 col-h-2 color-darkgray"></div>
+        <div class="col-w-2 col-h-2 color-red"></div>
+        <div class="col-w-2 col-h-2 color-red">
+          <div class="col-w-2 col-h-1 col-absolute col-bottom-corner color-white"></div>
+        </div>
+        <div class="col-w-2 col-h-2 color-red"></div>
+        <div class="col-w-2 col-h-2 color-lightgray">
+          <div class="col-w-2 col-h-1 col-absolute col-topleftcorner color-darkgreen"> </div>
+        </div>
+        <div class="col-w-2 col-h-2 color-lightgray">
+          <div class="col-w-2 col-h-1 col-absolute col-topleftcorner color-darkgreen"> </div>
+        </div>
+        <div class="col-w-2 col-h-2 color-lightgray">
+          <div class="col-w-2 col-h-1 col-absolute col-topleftcorner color-darkgreen"> </div>
+        </div>
+        <div class="col-w-4 col-h-2 color-darkgray"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-w-2 col-h-4 color-yellow">
+          <div class="col-w-2 col-h-2 col-absolute col-bottomleftcorner color-orange"></div>
+        </div>
+        <div class="col-w-2 col-h-4 color-orange">
+          <div class="col-w-2 col-h-2 col-absolute col-bottom-corner color-lightgray"></div>
+        </div>
+        <div class="col-w-2 col-h-4 color-red">
+          <div class="col-w-1 col-h-1 col-absolute col-bottomleftcorner color-white"></div>
+        </div>
+        <div class="col-w-2 col-h-4 color-red">
+          <div class="col-w-2 col-h-1 col-absolute col-topleftcorner color-white"></div>
+        </div>
+        <div class="col-w-2 col-h-4 color-red">
+          <div class="col-w-1 col-h-1 col-absolute col-bottomrightcorner color-white"></div>
+        </div>
+        <div class="col-w-4 col-h-4 color-teal"></div>
+        <div class="col-w-2 col-h-4 color-teal"></div>
+        <div class="col-w-4 col-h-4 color-lightgray"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-w-4 col-h-2 color-lavender"></div>
+        <div class="col-w-4 col-h-2 color-lavender"></div>
+        <div class="col-w-4 col-h-1 color-purple"></div>
+        <div class="col-w-4 col-h-1 color-purple"></div>
+        <div class="col-w-1 col-h-1 color-yellow"></div>
+        <div class="col-w-1 col-h-1 color-red"></div>
+        <div class="col-w-1 col-h-1 color-yellow"></div>
+        <div class="col-w-1 col-h-1 color-red"></div>
+        <div class="col-w-4 col-h-1 color-darkgreen"></div>
+        <div class="col-w-4 col-h-1 color-orange"></div>
+        <div class="col-w-4 col-h-1 color-orange"></div>
+      </div>
+        <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </body>
+
+
+
 </html>
